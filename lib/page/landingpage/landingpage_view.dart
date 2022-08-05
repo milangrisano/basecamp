@@ -11,18 +11,52 @@ class LandingPageView extends StatelessWidget {
       color: Colors.black,
       child: ListView(
         // physics: const NeverScrollableScrollPhysics(),
+        children: const [
+          BannerView(),
+          AboutView(),
+          ServicesSection(),
+          VideoSection(),          
+        ],
+      ),
+    );
+  }
+}
+
+class VideoSection extends StatelessWidget {
+  const VideoSection({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.black,
+      width: double.infinity,
+      height: 600,
+      child: Column(
         children: [
-          const BannerView(),
-          const AboutView(),
-          const ServicesSection(),
           Container(
-            color: Colors.yellow,
-            height: 500,
-            width: double.infinity,
+            color: Colors.black,
+            height: 140,
+            width: 430,
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                const LettersOutline(
+                  text: 'Work',
+                  fontSize: 140,
+                ),
+                Positioned(
+                  bottom: 10,
+                  child: LettersBold(
+                    text: 'Things we’ve PRODUCED'.toUpperCase(),
+                    fontSize: 30
+                  )
+                ),
+              ],
+            ),
           ),
           
         ],
-      ),
+      )
     );
   }
 }
