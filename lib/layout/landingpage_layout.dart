@@ -44,7 +44,7 @@ class _LandingPageLayoutState extends State<LandingPageLayout> with SingleTicker
                     if ( size.width > 800 )
                     ...[
                       SizedBox(
-                        width: 600,
+                        width: 620,
                         child: TabBar(
                           controller: tabController,
                           labelStyle: GoogleFonts.roboto(

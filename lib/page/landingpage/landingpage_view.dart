@@ -1,4 +1,5 @@
 import 'package:basecamp/export.dart';
+import 'package:basecamp/page/landingpage/views/services_section.dart';
 import 'package:flutter/material.dart';
 
 class LandingPageView extends StatelessWidget {
@@ -11,13 +12,9 @@ class LandingPageView extends StatelessWidget {
       child: ListView(
         // physics: const NeverScrollableScrollPhysics(),
         children: [
-          BannerView(),
-          AboutView(),
-          Container(
-            color: Colors.green,
-            height: 500,
-            width: double.infinity,
-          ),
+          const BannerView(),
+          const AboutView(),
+          const ServicesSection(),
           Container(
             color: Colors.yellow,
             height: 500,

@@ -2,28 +2,27 @@ import 'package:basecamp/export.dart';
 import 'package:flutter/material.dart';
 
 class LettersOutline extends StatelessWidget {
+  final String text;
+  final double fontSize;
+  final Color color;
+  final double strokeWidth;
   const LettersOutline({
     Key? key,
     required this.text,
     this.fontSize  = 12,
     this.color  = Colors.white,
+    this.strokeWidth = 1,
   }) : super(key: key);
-  final String text;
-  final double fontSize;
-  final Color color;
-
-
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
       style: GoogleFonts.russoOne(
-        
         fontSize: fontSize,
         foreground: Paint()
         ..style = PaintingStyle.stroke
-        ..color =Colors.white
-        ..strokeWidth = 1
+        ..color = color
+        ..strokeWidth = strokeWidth
       ),
     );
   }
