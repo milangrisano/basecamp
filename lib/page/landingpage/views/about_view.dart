@@ -21,7 +21,7 @@ class AboutView extends StatelessWidget {
                 shape: BoxShape.circle,
                 border: Border.all(
                   width: 3,
-                  color: Colors.white,
+                  color: Colors.white.withOpacity(0.6),
                 )
                
               )
@@ -39,12 +39,13 @@ class AboutView extends StatelessWidget {
                   height: 140,
                   child: Stack(
                     alignment: Alignment.center,
-                    children: const [
+                    children: [
                       LettersOutline(
                         text: 'About',
                         fontSize: 140,
+                        color: Colors.white.withOpacity(0.6),
                       ),
-                      Positioned(
+                      const Positioned(
                         bottom: 10,
                         child: LettersBold(
                           text: 'BASECAMP',

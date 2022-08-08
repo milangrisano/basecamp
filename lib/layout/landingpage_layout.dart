@@ -69,7 +69,7 @@ class _LandingPageLayoutState extends State<LandingPageLayout> with SingleTicker
                     ElevatedButton.icon(
                       onPressed: (){},
                       icon: const Icon(Icons.arrow_forward, color: Colors.black),
-                      label: const Letters(text: 'Need a Proyect?'),
+                      label: const LettersBold(text: 'Need a Proyect?', color: Colors.black),
                       style: ElevatedButton.styleFrom(
                         primary: const Color(0xffCDFF00),
                         elevation: 4,
