@@ -1,6 +1,5 @@
 import 'package:basecamp/export.dart';
-import 'package:basecamp/page/landingpage/landingpage_view.dart';
-import 'package:basecamp/shared/logo.dart';
+import 'package:basecamp/page/about/about_page.dart';
 import 'package:flutter/material.dart';
 
 class LandingPageLayout extends StatefulWidget {
@@ -53,7 +52,7 @@ class _LandingPageLayoutState extends State<LandingPageLayout> with SingleTicker
                           ),
                           indicatorWeight: 3.5,
                           labelColor: Colors.white,
-                          indicatorColor: Colors.white,
+                          indicatorColor: const Color(0xffCDFF00),
                           unselectedLabelColor: Colors.grey,
                           tabs: const[
                             Tab(text: 'Home'),
@@ -88,7 +87,7 @@ class _LandingPageLayoutState extends State<LandingPageLayout> with SingleTicker
                   controller: tabController,
                   children: const[
                     LandingPageView(),
-                    Page(color: Colors.green, title: 'Pagina 2'),
+                    AboutPage(),
                     Page(color: Colors.red, title: 'Pagina 3'),
                     Page(color: Colors.yellow, title: 'Pagina 4'),
                     Page(color: Colors.pink, title: 'Pagina 5'),

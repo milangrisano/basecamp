@@ -28,6 +28,8 @@ export 'package:basecamp/page/landingpage/views/services_section.dart';
 export 'package:basecamp/page/landingpage/views/video_section.dart';
 
 export 'package:basecamp/shared/logo.dart';
+export 'package:basecamp/page/landingpage/landingpage_view.dart';
 
+export 'package:basecamp/page/about/views/about_banner.dart';
 
 
