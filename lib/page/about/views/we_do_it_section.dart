@@ -1,38 +1,44 @@
-import 'package:basecamp/utils/custom_text.dart';
+import 'package:basecamp/export.dart';
 import 'package:flutter/material.dart';
 
-class BannerView extends StatelessWidget {
-  const BannerView({Key? key}) : super(key: key);
+class WeDoItSection extends StatelessWidget {
+  const WeDoItSection({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Colors.black,
       width: double.infinity,
       height: 600,
-      decoration: const BoxDecoration(
-        image: DecorationImage(
-          fit: BoxFit.cover,
-          image: AssetImage(
-            'assets/banner/landingpage.png'
-          )
-        )
-      ),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 100.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                LettersOutline(text: 'WE TELL', fontSize: 45),
-                LettersBold(text: 'STORIES TO', fontSize: 90),
-                LettersBold(text: 'REMENBER', fontSize: 90, color: Color(0xffCDFF00)),
-                Letters(text: 'stories TO REMEMBER.', fontSize: 18)
-              ],
+      child: Row(
+        children: [
+          Container(
+            margin: const EdgeInsets.only(left:50),
+            padding: const EdgeInsets.only(left:50),
+            width: 500,
+            height: 500,
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/banner/wedoit.png'),
+                fit: BoxFit.cover
+              )
             ),
-            Container(
+          ),
+          Container(
+            width: 550,
+            margin: const EdgeInsets.symmetric(horizontal: 50),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const LettersBold(text: 'How we do it?', fontSize: 30),
+                const SizedBox(height: 30),
+                const LettersJustify(
+                  text: 'We enrich the proposal based on creativity, audiovisual resources, cinematographic trends and on social networks.\n\nOur robust technological and personal platform allows us to move in steps much faster than a conventional production company, without sacrificing quality or compromising results.',
+                  fontSize: 18,
+                ),
+                const SizedBox(height: 30),
+                Container(
                   // color: Colors.pink,
                   width: 200,
                   height: 50,
@@ -73,9 +79,11 @@ class BannerView extends StatelessWidget {
                     ],
                   ),
                 )
-          ],
-        ),
-      ),
+              ],
+            ),
+          )
+        ],
+      )
     );
   }
 }

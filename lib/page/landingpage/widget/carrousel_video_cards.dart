@@ -6,7 +6,6 @@ class CarrouselVideoCards extends StatefulWidget {
   const CarrouselVideoCards({
     Key? key,
   }) : super(key: key);
-
   @override
   State<CarrouselVideoCards> createState() => _CarrouselVideoCardsState();
 }

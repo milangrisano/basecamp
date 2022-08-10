@@ -26,6 +26,7 @@ class _LandingPageLayoutState extends State<LandingPageLayout> with SingleTicker
     final size = MediaQuery.of(context).size;
     return Scaffold(
       body: ListView(
+        shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
         children: [
           Column(

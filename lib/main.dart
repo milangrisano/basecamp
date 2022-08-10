@@ -13,6 +13,13 @@ class MyApp extends StatelessWidget {
         '/home': (context) => const LandingPageLayout(),
 
       },
+      theme: ThemeData.light().copyWith(
+        scrollbarTheme: const ScrollbarThemeData().copyWith(
+          thumbColor: MaterialStateProperty.all(
+            const Color(0xffCDFF00)
+          )
+        )
+      )
     );
   }
 }

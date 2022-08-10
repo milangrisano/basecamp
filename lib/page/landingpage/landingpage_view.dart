@@ -1,4 +1,4 @@
-import 'package:basecamp/page/landingpage/views/newsletters_section.dart';
+import 'package:basecamp/shared/newsletters_section.dart';
 import 'package:basecamp/shared/contact_ribbon.dart';
 import 'package:flutter/material.dart';
 import 'package:basecamp/export.dart';
@@ -12,8 +12,8 @@ class LandingPageView extends StatelessWidget {
       color: Colors.black,
       child: ListView(
         children: const [
-          BannerView(),
-          AboutView(),
+          BannerLandingPage(),
+          AboutSection(),
           ServicesSection(),
           VideoSection(),
           NewsLettersSection(),

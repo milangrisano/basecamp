@@ -23,14 +23,42 @@ class AboutBanner extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                LettersOutline(text: 'WE CREATE', fontSize: 45),
-                LettersBold(text: 'MORE THAN', fontSize: 90),
-                LettersBold(text: 'JUST FILMS', fontSize: 90, color: Color(0xffCDFF00)),
-              ],
+            Container(
+              width: 750,
+              child: Stack(
+                alignment: AlignmentDirectional.centerEnd,
+                children: [
+                  Container(
+                    height: 450,
+                    width: 450,
+                    decoration:  BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(
+                        width: 3,
+                        color: Colors.white.withOpacity(0.6),
+                      )                   
+                    )
+                  ),
+                  Container(
+                    height: 300,
+                    color: Colors.transparent,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
+                            LettersOutline(text: 'WE CREATE', fontSize: 45),
+                            LettersBold(text: 'MORE THAN', fontSize: 90),
+                            LettersBold(text: 'JUST FILMS', fontSize: 90, color: Color(0xffCDFF00)),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
             Container(
                   // color: Colors.pink,
@@ -58,7 +86,7 @@ class AboutBanner extends StatelessWidget {
                             ElevatedButton(
                               onPressed: (){},
                               style: ElevatedButton.styleFrom(
-                                primary: Colors.black,
+                                primary: Colors.black87,
                               ),
                               child: const Letters(text: 'See our projects'),
                             ),
