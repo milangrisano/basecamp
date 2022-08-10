@@ -17,9 +17,10 @@ class _YouTubeCardsState extends State<YouTubeCards> {
   @override
   void initState() {
     _controller = YoutubePlayerController(
-      initialVideoId: YoutubePlayerController.convertUrlToId(widget.youtubeURL!)!,
+      initialVideoId: YoutubePlayerController.convertUrlToId(widget.youtubeURL)!,
       params: const YoutubePlayerParams(
-        loop: true,
+        autoPlay: false,
+        loop: false,
         color: 'blue',
         desktopMode: false,
         showFullscreenButton: true,
