@@ -28,7 +28,7 @@ export 'package:basecamp/page/landingpage/views/services_section.dart';
 export 'package:basecamp/page/landingpage/views/video_section.dart';
 
 export 'package:basecamp/shared/logo.dart';
-export 'package:basecamp/page/landingpage/landingpage_view.dart';
+export 'package:basecamp/page/landingpage/landing_page.dart';
 
 export 'package:basecamp/page/about/views/about_banner.dart';
 
@@ -36,5 +36,9 @@ export 'package:basecamp/page/about/views/we_do_it_section.dart';
 
 export 'package:basecamp/page/about/views/meet_the_team_section.dart';
 
-
+export 'package:basecamp/page/about/widget/avatar_team.dart';
+export 'package:basecamp/shared/newsletters_section.dart';
+export 'package:basecamp/shared/contact_ribbon.dart';
+export 'package:basecamp/page/about/views/team_section.dart';
+export 'package:basecamp/page/contact/views/contact_section.dart';
 

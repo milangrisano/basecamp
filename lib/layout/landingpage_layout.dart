@@ -1,5 +1,6 @@
 import 'package:basecamp/export.dart';
 import 'package:basecamp/page/about/about_page.dart';
+import 'package:basecamp/page/contact/contact_page.dart';
 import 'package:flutter/material.dart';
 
 class LandingPageLayout extends StatefulWidget {
@@ -25,81 +26,84 @@ class _LandingPageLayoutState extends State<LandingPageLayout> with SingleTicker
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
-      body: ListView(
-        shrinkWrap: true,
-        physics: const NeverScrollableScrollPhysics(),
-        children: [
-          Column(
-            children: [
-              Container(
-                height: 90,
-                color: Colors.black,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    InkWell(
-                      onTap: () => Navigator.pushNamed(context, '/home'),
-                      child: const Logo(width: 100, height: 90)
-                    ),
-                    if ( size.width > 800 )
-                    ...[
-                      SizedBox(
-                        width: 620,
-                        child: TabBar(
-                          controller: tabController,
-                          labelStyle: GoogleFonts.roboto(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 14,
+      body: ScrollConfiguration(
+        behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+        child: ListView(
+          physics: const NeverScrollableScrollPhysics(),
+          children: [
+            Column(
+              children: [
+                Container(
+                  height: 90,
+                  color: Colors.black,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      InkWell(
+                        onTap: () => Navigator.pushNamed(context, '/home'),
+                        child: const Logo(width: 100, height: 90)
+                      ),
+                      if ( size.width > 800 )
+                      ...[
+                        SizedBox(
+                          width: 620,
+                          child: TabBar(
+                            controller: tabController,
+                            labelStyle: GoogleFonts.roboto(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                            ),
+                            indicatorWeight: 3.5,
+                            labelColor: Colors.white,
+                            indicatorColor: const Color(0xffCDFF00),
+                            unselectedLabelColor: Colors.grey,
+                            tabs: const[
+                              Tab(text: 'HOME'),
+                              Tab(text: 'ABOUT'),
+                              Tab(text: 'PROJECTS'),
+                              Tab(text: 'SERVICES'),
+                              Tab(text: 'BLOG'),
+                              Tab(text: 'CONTACT'),
+                            ],
                           ),
-                          indicatorWeight: 3.5,
-                          labelColor: Colors.white,
-                          indicatorColor: const Color(0xffCDFF00),
-                          unselectedLabelColor: Colors.grey,
-                          tabs: const[
-                            Tab(text: 'Home'),
-                            Tab(text: 'ABOUT'),
-                            Tab(text: 'PROJECTS'),
-                            Tab(text: 'SERVICES'),
-                            Tab(text: 'BLOG'),
-                            Tab(text: 'CONTACT'),
-                          ],
+                        ),
+                      ] ,
+                      ElevatedButton.icon(
+                        onPressed: (){},
+                        icon: const Icon(Icons.arrow_forward, color: Colors.black),
+                        label: const LettersBold(text: 'Need a Proyect?', color: Colors.black),
+                        style: ElevatedButton.styleFrom(
+                          primary: const Color(0xffCDFF00),
+                          elevation: 4,
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40))
                         ),
                       ),
-                    ] ,
-                    ElevatedButton.icon(
-                      onPressed: (){},
-                      icon: const Icon(Icons.arrow_forward, color: Colors.black),
-                      label: const LettersBold(text: 'Need a Proyect?', color: Colors.black),
-                      style: ElevatedButton.styleFrom(
-                        primary: const Color(0xffCDFF00),
-                        elevation: 4,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40))
-                      ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
-              ),
-              Container(
-                color: Colors.black,
-                width: double.infinity,
-                height: size.height,
-                child: 
-                  TabBarView(
-                  controller: tabController,
-                  children: const[
-                    LandingPageView(),
-                    AboutPage(),
-                    Page(color: Colors.red, title: 'Pagina 3'),
-                    Page(color: Colors.yellow, title: 'Pagina 4'),
-                    Page(color: Colors.pink, title: 'Pagina 5'),
-                    Page(color: Colors.purpleAccent, title: 'Pagina 5'),
-                  ]
+                Container(
+                  color: Colors.black,
+                  width: double.infinity,
+                  height: size.height,
+                  child: 
+                    TabBarView(
+                    controller: tabController,
+                    children: const[
+                      LandingPage(),
+                      AboutPage(),
+                      Page(color: Colors.red, title: 'Pagina 3'),
+                      Page(color: Colors.yellow, title: 'Pagina 4'),
+                      Page(color: Colors.pink, title: 'Pagina 5'),
+                      ContactUsPage(),
+      
+                    ]
+                  ),
                 ),
-              ),
-              
-            ],
-          ),
-        ],
+                
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

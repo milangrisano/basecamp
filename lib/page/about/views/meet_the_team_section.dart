@@ -14,60 +14,53 @@ class MeetTheTeamSection extends StatelessWidget {
           color: Colors.black,
           width: double.infinity,
           height: 400,
-          child: Stack(
-            alignment: AlignmentDirectional.center,
+          child: Row(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
+              Container(
+                color: Colors.white,
+                width: size.width * 1/3,
+                height: 3,
+              ),
+              Stack(
+                alignment: AlignmentDirectional.center,
                 children: [
                   Container(
-                    margin: const EdgeInsets.only(
-                      right: 150,
-                      bottom: 60
+                    color: Colors.black,
+                    child: Container(                        
+                      height: 450,
+                      width: 450,
+                      margin: const EdgeInsets.only(
+                        left: 300,
+                        top: 50
+                      ),
+                      decoration:  BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          width: 3,
+                          color: Colors.white.withOpacity(0.6),
+                        )                   
+                      )
                     ),
-                    height: 450,
-                    width: 450,
-                    decoration:  BoxDecoration(
-                      shape: BoxShape.circle,
-                      border: Border.all(
-                        width: 3,
-                        color: Colors.white.withOpacity(0.6),
-                      )                   
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    color: Colors.black,
+                    width: 480,
+                    height: 200,
+                    child:  const LettersOutline(
+                      text: 'Meet',
+                      fontSize: 140,
+                      color: Color.fromARGB(255, 209, 209, 209)
                     )
                   ),
-                ],
-              ),
-              Row(
-                children: [
                   Container(
-                    color: Colors.white,
-                    width: size.width * 1/3,
-                    height: 3,
-                  ),
-                  Stack(
-                    alignment: AlignmentDirectional.center,
-                    children: [
-                      Container(
-                        alignment: Alignment.center,
-                        color: Colors.black,
-                        width: 480,
-                        height: 200,
-                        child:  const LettersOutline(
-                          text: 'Meet',
-                          fontSize: 140,
-                          color: Color.fromARGB(255, 209, 209, 209)
-                        )
-                      ),
-                      Container(
-                        padding: const EdgeInsets.only(top: 85),
-                        height: 150,
-                        // color: Colors.yellow,
-                        child: const LettersBold(
-                          text: 'THE TEAM',
-                          fontSize: 30
-                        )
-                      ),
-                    ],
+                    padding: const EdgeInsets.only(top: 85),
+                    height: 150,
+                    // color: Colors.yellow,
+                    child: const LettersBold(
+                      text: 'THE TEAM',
+                      fontSize: 30
+                    )
                   ),
                 ],
               ),
