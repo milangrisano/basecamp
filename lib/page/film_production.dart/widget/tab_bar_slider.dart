@@ -2,6 +2,7 @@ import 'package:basecamp/export.dart';
 import 'package:basecamp/page/film_production.dart/widget/film_production_details.dart';
 import 'package:basecamp/page/film_production.dart/widget/live_production_detail.dart';
 import 'package:basecamp/page/film_production.dart/widget/services_banner.dart';
+import 'package:basecamp/page/film_production.dart/widget/sound_studio_details.dart';
 import 'package:flutter/material.dart';
 
 class CustomTabBarServices extends StatefulWidget {
@@ -72,41 +73,18 @@ class _CustomTabBarServicesState extends State<CustomTabBarServices> with Single
           ),
           Container(
             width: double.infinity,
-            height: 500,
+            height: 520,
             child: 
               TabBarView(
               controller: tabController,
               children: const[
                 FilmProductionDetails(),
                 LiveProductionDetails(),
-                Page(color: Colors.red, title: 'Pagina 3'),
+                SoundStudioDetails(),
               ]
             ),    
           ),
         ],
-    );
-  }
-}
-
-class Page extends StatelessWidget {
-  final Color color;
-  final String title;
-  const Page({
-    Key? key,
-    required this.color,
-    required this.title
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        alignment: Alignment.center,
-        color: color,
-        width: double.infinity,
-        height: double.infinity,
-        child: Letters(text: title, fontSize: 50),    
-      ),
     );
   }
 }
