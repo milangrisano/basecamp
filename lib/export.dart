@@ -45,4 +45,3 @@ export 'package:basecamp/shared/social_media.dart';
 export 'package:basecamp/shared/text_field_box.dart';
 
 
-export 'package:basecamp/page/film_production.dart/views/film_production_banner.dart';

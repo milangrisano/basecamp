@@ -1,4 +1,4 @@
-import 'package:basecamp/page/film_production.dart/widget/custom_main_tab.dart';
+import 'package:basecamp/page/film_production.dart/widget/tab_bar_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:basecamp/export.dart';
 
@@ -10,15 +10,10 @@ class FilmProduction extends StatelessWidget {
     return ScrollConfiguration(
       behavior: ScrollConfiguration.of(context).copyWith(scrollbars: true),
       child: ListView(
-        children: [
-          Container(
-            color: Colors.black,
-            width: double.infinity,
-            height: 1200,
-            child: const CustomMainTab(),
-          ),
-          const NewsLettersSection(),
-          const ContactRibbon(),
+        children: const [
+          CustomTabBarServices(),
+          NewsLettersSection(),
+          ContactRibbon(),
         ],
       ),
     );

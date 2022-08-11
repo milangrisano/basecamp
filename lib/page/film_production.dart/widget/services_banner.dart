@@ -1,37 +1,21 @@
-import 'package:flutter/material.dart';
+import 'package:basecamp/class/banner_services.dart';
 import 'package:basecamp/export.dart';
+import 'package:flutter/material.dart';
 
-class BannerList extends StatelessWidget {
-  final List<Banner> categoryBanner;
-  const BannerList({
+class ServicesBanner extends StatelessWidget {
+  final int index;
+  const ServicesBanner({
     Key? key,
-    required this.categoryBanner
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: categoryBanner.map((e)=> FilmProductionBanner(component: e,)).toList(),
-    );
-  }
-}
-
-class FilmProductionBanner extends StatelessWidget {
-  final Banner component;
-  const FilmProductionBanner({
-    Key? key,
-    required this.component,
+    required this.index,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Container(
-      width: double.infinity,
-      height: 600,
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage(component.image),
+          image: AssetImage(banner[index].image),
           fit: BoxFit.cover
         )
       ),
@@ -67,9 +51,9 @@ class FilmProductionBanner extends StatelessWidget {
                 // width: double.infinity,
                 color: Colors.transparent,
                 child: LettersOutline(
-                  text: component.bold,
+                  text: banner[index].bold,
                   fontSize: 45,
-                  color: Color.fromARGB(255, 209, 209, 209)
+                  color: const Color.fromARGB(255, 209, 209, 209)
                 ),
               ),                  
               Row(
@@ -82,7 +66,7 @@ class FilmProductionBanner extends StatelessWidget {
                   Container(
                     color: Colors.transparent,
                     child: LettersBold(
-                      text: component.solid,
+                      text: banner[index].solid,
                       fontSize: 90
                     )
                   ),
@@ -96,36 +80,3 @@ class FilmProductionBanner extends StatelessWidget {
   }
 }
 
-class Banner {
-  final String bold;
-  final String solid;
-  final String image;
-  final int servicesbanner;
-
-  Banner(
-    this.bold,
-    this.solid,
-    this.image,
-    this.servicesbanner
-  );
-}
-List<Banner> banner = [
-  Banner(
-    'FILM',
-    'PRODUCTION',
-    'assets/banner/filmproduction.png',
-    1
-  ),
-  Banner(
-    'LIVE',
-    'PRODUCTION',
-    'assets/banner/liveproduction.png',
-    2
-  ),
-  Banner(
-    'SOUND',
-    'STUDIO',
-    'assets/banner/soundstudio.png',
-    3
-  ),
-];
