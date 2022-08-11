@@ -8,13 +8,13 @@ class ContactUsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Container(
-      color: Colors.black,
+      // color: Colors.black,
       width: double.infinity,
       height: 400,
       child: Stack(
         children: [
           Container(
-            color: Colors.black,
+            // color: Colors.black,
             child: Container(                        
               height: 450,
               width: 450,
@@ -36,7 +36,7 @@ class ContactUsSection extends StatelessWidget {
             children: [
               Container(
                 alignment: Alignment.centerRight,
-                color: Colors.black,
+                color: Colors.black26,
                 height: 120,
                 width: size.width * 2/3,
                 child:  const LettersOutline(
@@ -51,7 +51,7 @@ class ContactUsSection extends StatelessWidget {
                 height: 3,
               ),
               Container(
-                color: Colors.black,
+                color: Colors.black26,
                 height: 30,
                 width: size.width * 2/3,
               )

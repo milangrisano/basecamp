@@ -1,4 +1,3 @@
-import 'package:basecamp/page/contact/views/lets_film.dart';
 import 'package:flutter/material.dart';
 import 'package:basecamp/export.dart';
 
@@ -11,14 +10,23 @@ class ContactUsPage extends StatelessWidget {
       behavior: ScrollConfiguration.of(context).copyWith(scrollbars: true),
       child: ListView(
         children: [
-          const ContactUsSection(),
-          const LetsFilm(),
-          // const LocateUs(),
           Container(
-            color: Colors.blue,
-            width: double.infinity,
-            height: 200,
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/banner/contactus.png'),
+                fit: BoxFit.cover
+              )
+            ),
+            child: Column(
+              children: const [
+                ContactUsSection(),
+                LetsFilm(),
+                LocateUs(),
+              ],
+            ),
           ),
+          const NewsLettersSection(),
+          const ContactRibbon()
         ],
       ),
     );
