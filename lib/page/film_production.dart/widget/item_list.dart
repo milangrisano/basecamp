@@ -24,17 +24,16 @@ class ItemCard extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     return Container(
-      color: Colors.blue,
-      height: 575,
+      color: Colors.black,
+      height: 538,
       width: double.infinity,
       child: Row(
         children: [
           Expanded(
             flex: 1,
             child: Container(
-              color: Colors.green,
+              color: Colors.black,
             ),
           ),
           Expanded(
@@ -46,10 +45,10 @@ class ItemCard extends StatelessWidget {
                   width: double.infinity,
                   height: 200,
                   decoration: BoxDecoration(
-                    color: Colors.red,
+                    // color: Colors.red,
                     image: DecorationImage(
                       image: AssetImage(product.image),
-                      fit: BoxFit.cover
+                      fit: BoxFit.fitWidth
                     )
                   ),
                   child: LettersBoldCenter(

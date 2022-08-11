@@ -69,6 +69,7 @@ class _CustomMainTabState extends State<CustomMainTab> {
             ),
           ),
           Container(
+            margin: const EdgeInsets.symmetric(vertical: 20),
             width: double.infinity,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,

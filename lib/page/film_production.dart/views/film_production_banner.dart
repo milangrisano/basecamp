@@ -1,5 +1,5 @@
-import 'package:basecamp/export.dart';
 import 'package:flutter/material.dart';
+import 'package:basecamp/export.dart';
 
 class BannerList extends StatelessWidget {
   final List<Banner> categoryBanner;
