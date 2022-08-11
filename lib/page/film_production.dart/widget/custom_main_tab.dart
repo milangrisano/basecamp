@@ -49,39 +49,48 @@ class _CustomMainTabState extends State<CustomMainTab> {
             margin: const EdgeInsets.symmetric(vertical: 20),
             width: double.infinity,
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                InkWell(
-                  key: _key1,
-                  onTap: () => _selectedItem(1),
-                  child: LettersBold(
-                    text: 'Film Production',
-                    fontSize: 18,
-                    color: _currentSelection == 1
-                      ? const Color(0xffCDFF00)
-                      : Colors.grey,
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                  child: InkWell(
+                    key: _key1,
+                    onTap: () => _selectedItem(1),
+                    child: LettersBold(
+                      text: 'Film Production',
+                      fontSize: 18,
+                      color: _currentSelection == 1
+                        ? const Color(0xffCDFF00)
+                        : Colors.grey,
+                    ),
                   ),
                 ),
-                InkWell(
-                  key: _key2,
-                  onTap: () => _selectedItem(2),
-                  child: LettersBold(
-                    text: 'Live Production',
-                    fontSize: 18,
-                    color: _currentSelection == 2
-                      ? const Color(0xffCDFF00)
-                      : Colors.grey,
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                  child: InkWell(
+                    key: _key2,
+                    onTap: () => _selectedItem(2),
+                    child: LettersBold(
+                      text: 'Live Production',
+                      fontSize: 18,
+                      color: _currentSelection == 2
+                        ? const Color(0xffCDFF00)
+                        : Colors.grey,
+                    ),
                   ),
                 ),
-                InkWell(
-                  key: _key3,
-                  onTap: () => _selectedItem(3),
-                  child: LettersBold(
-                    text: 'Sound Studio',
-                    fontSize: 18,
-                    color: _currentSelection == 3
-                      ? const Color(0xffCDFF00)
-                      : Colors.grey,
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 30.0),
+                  child: InkWell(
+                    key: _key3,
+                    onTap: () => _selectedItem(3),
+                    child: LettersBold(
+                      text: 'Sound Studio',
+                      fontSize: 18,
+                      color: _currentSelection == 3
+                        ? const Color(0xffCDFF00)
+                        : Colors.grey,
+                    ),
                   ),
                 ),  
               ],
