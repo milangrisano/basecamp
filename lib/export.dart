@@ -53,5 +53,9 @@ export 'package:basecamp/shared/custom_page.dart';
 
 
 export 'package:basecamp/page/film_production.dart/film_production.dart';
+export 'package:basecamp/page/project/views/video_static_section.dart';
 
-
+export 'package:basecamp/page/blog/views/blog_banner.dart';
+export 'package:basecamp/page/blog/views/grid_blog_builder.dart';
+export 'package:basecamp/class/all_video.dart';
+export 'package:basecamp/class/all_blog.dart';

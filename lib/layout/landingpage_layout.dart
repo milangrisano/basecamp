@@ -1,4 +1,5 @@
 import 'package:basecamp/export.dart';
+import 'package:basecamp/page/blog/blog_page.dart';
 import 'package:flutter/material.dart';
 
 class LandingPageLayout extends StatefulWidget {
@@ -90,11 +91,9 @@ class _LandingPageLayoutState extends State<LandingPageLayout> with SingleTicker
                       LandingPage(),
                       AboutPage(),
                       ProjectPage(),
-                      // Page(color: Colors.red, title: 'Pagina 3'),
                       FilmProduction(),
-                      CustomPage(color: Colors.yellow, title: 'Pagina 5'),
+                      BlogPage(),
                       ContactUsPage(),
-      
                     ]
                   ),
                 ),                

@@ -1,5 +1,4 @@
 import 'package:basecamp/export.dart';
-import 'package:basecamp/page/project/views/video_static_section.dart';
 import 'package:flutter/material.dart';
 
 
@@ -66,14 +65,13 @@ class _CustomTabBarProjectState extends State<CustomTabBarProject> with SingleTi
               TabBarView(
               controller: tabController,
               children: const[
-                GridViewBuilder(),
-                CustomPage(color: Colors.purple, title: 'Page 2'),
-                CustomPage(color: Colors.yellow, title: 'Page 3'),
-                CustomPage(color: Colors.blue, title: 'Page 4'),
-                CustomPage(color: Colors.green, title: 'Page 5'),
-                CustomPage(color: Colors.deepOrange, title: 'Page 6'),
-                CustomPage(color: Colors.cyanAccent, title: 'Page 7'),
-
+                GridViewBuilder(itemCount: 6),
+                GridViewBuilder(itemCount: 4,),
+                GridViewBuilder(itemCount: 2,),
+                GridViewBuilder(itemCount: 6,),
+                GridViewBuilder(itemCount: 4,),
+                GridViewBuilder(itemCount: 2,),
+                GridViewBuilder(itemCount: 6,),
               ]
             ),    
           ),
