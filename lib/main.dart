@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
           thumbColor: MaterialStateProperty.all(
             const Color(0xffCDFF00)
           )
-        )
+        )        
       )
     );
   }

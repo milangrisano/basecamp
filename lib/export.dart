@@ -30,12 +30,18 @@ export 'package:basecamp/page/about/views/meet_the_team_section.dart';
 export 'package:basecamp/page/about/views/team_section.dart';
 export 'package:basecamp/page/about/views/about_banner.dart';
 export 'package:basecamp/page/about/widget/avatar_team.dart';
+export 'package:basecamp/page/about/about_page.dart';
 
 ///Contact///
 export 'package:basecamp/page/contact/views/locate_us.dart';
 export 'package:basecamp/page/contact/views/contact_section.dart';
 export 'package:basecamp/page/contact/views/lets_film.dart';
+export 'package:basecamp/page/contact/contact_page.dart';
 
+///Project///
+export 'package:basecamp/page/project/project_page.dart';
+export 'package:basecamp/page/project/views/project_banner.dart';
+export 'package:basecamp/page/project/views/custom_tabbar_project.dart';
 
 ///Shared///
 export 'package:basecamp/shared/logo.dart';
@@ -43,5 +49,9 @@ export 'package:basecamp/shared/newsletters_section.dart';
 export 'package:basecamp/shared/contact_ribbon.dart';
 export 'package:basecamp/shared/social_media.dart';
 export 'package:basecamp/shared/text_field_box.dart';
+export 'package:basecamp/shared/custom_page.dart';
+
+
+export 'package:basecamp/page/film_production.dart/film_production.dart';
 
 
