@@ -1,4 +1,5 @@
 import 'package:basecamp/export.dart';
+import 'package:basecamp/page/project/views/video_static_section.dart';
 import 'package:flutter/material.dart';
 
 
@@ -23,7 +24,6 @@ class _CustomTabBarProjectState extends State<CustomTabBarProject> with SingleTi
   }
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
     return Column(
         children: [
           Container(
@@ -33,7 +33,7 @@ class _CustomTabBarProjectState extends State<CustomTabBarProject> with SingleTi
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 SizedBox(
-                  width: 960,
+                  width: 950,
                   child: TabBar(
                     controller: tabController,
                     labelStyle: GoogleFonts.montserrat(
@@ -61,12 +61,12 @@ class _CustomTabBarProjectState extends State<CustomTabBarProject> with SingleTi
           ),
           Container(
             width: double.infinity,
-            height: 600,
+            height: 650,
             child: 
               TabBarView(
               controller: tabController,
               children: const[
-                CustomPage(color: Colors.pink, title: 'Page 1'),
+                GridViewBuilder(),
                 CustomPage(color: Colors.purple, title: 'Page 2'),
                 CustomPage(color: Colors.yellow, title: 'Page 3'),
                 CustomPage(color: Colors.blue, title: 'Page 4'),

@@ -6,13 +6,16 @@ class ProjectPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: const[
-        ProjectBanner(),
-        CustomTabBarProject(),
-        NewsLettersSection(),
-        ContactRibbon(),
-      ],
+    return  ScrollConfiguration(
+      behavior: ScrollConfiguration.of(context).copyWith(scrollbars: true),
+      child: ListView(
+        children: const[
+          ProjectBanner(),
+          CustomTabBarProject(),
+          NewsLettersSection(),
+          ContactRibbon(),
+        ],
+      ),
     );
   }
 }

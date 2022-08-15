@@ -36,7 +36,11 @@ class _CarrouselVideoCardsState extends State<CarrouselVideoCards> {
               margin: const EdgeInsets.symmetric(horizontal: 20),
               color: Colors.black,
               width: 444,
-              child: YouTubeCards(youtubeURL: videolandingPage[index].youtubeURL),
+              child: YouTubeCards(
+                youtubeURL: videolandingPage[index].youtubeURL,
+                height: 200,
+                width: 355,
+              ),
             );
           },
         ),
